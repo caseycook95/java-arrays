@@ -1,0 +1,88 @@
+/**
+ * Holds methods that manipulates arrays.
+ *
+ * @author Casey Cook
+ *
+ */
+public class ArrayUtility
+{
+	/**
+	 * Takes the argument of an array and finds the largest out of the array and returns the largest number of the array.
+	 * @param intArray
+	 * @return
+	 */
+	public int findLargestInt(int[] intArray)
+	{
+		int largest = intArray[0];
+		
+		for(int i = 1; i < intArray.length; i++)
+		{
+			if (largest < intArray[i])
+			{
+				largest = intArray[i];
+			}
+		}
+		
+		return largest;
+	}
+	
+	/**
+	 * Takes the argument of an array and finds the smallest out of the array and returns the smallest number of the array.
+	 * @param intArray
+	 * @return
+	 */
+	public int findSmallestInt(int[] intArray)
+	{
+		int smallest = intArray[0];
+		
+		for(int i = 1; i < intArray.length; i++)
+		{
+			if (smallest > intArray[i])
+			{
+				smallest = intArray[i];
+			}
+		}
+		
+		return smallest;
+	}
+	
+	/**
+	 * Takes in the array as an argument. Prints all the elements of the array with a label.
+	 * @param intArray
+	 */
+	public void printIntArray(int[] intArray)
+	{
+		for(int i = 0; i < intArray.length; i++)
+		{
+			System.out.println("intArray[" + i + "] = " + intArray[i]);
+		}
+	}
+	
+	/**
+	 * Takes in the array as an argument. Calculates the average of all the elements in the array. Returns the average.
+	 * @param intArray
+	 * @return
+	 */
+	public int calculateAverage (int[] intArray)
+	{
+		int sum = 0;
+		for(int i = 0; i < intArray.length; i++)
+		{
+			sum = sum + intArray[i];
+		}
+	return sum / intArray.length;
+	}
+	
+	/**
+	 * Takes in the array as an argument. Increases each element of the array by a factor of 2.
+	 * @param intArray
+	 */
+	public void increaseValues(int[] intArray)
+	{
+		for(int i = 0; i < intArray.length; i++)
+		{
+			intArray[i] = intArray[i] * 2;
+		}
+	}
+	
+}
